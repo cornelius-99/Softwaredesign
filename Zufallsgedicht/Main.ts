@@ -31,5 +31,4 @@ function appendToHTML(sentences: string[]) {
     for (let i = 0; i < sentences.length; i++) {
         document.body.innerHTML += "<p>" + sentences[i] + "</p>";
     }
-
 }
