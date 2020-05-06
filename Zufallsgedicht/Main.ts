@@ -1,19 +1,35 @@
+console.log("UML Diagramm von Patrick Kaserer. Umgesetzt von Cornelius Schaub")
+
 let subjects: string[] = ["Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore"];
 let verbs: string[] = ["braut", "liebt", "studiert", "hasst", "zaubert", "zerstört"];
 let objects: string[] = ["Zaubertränke", "den Grimm", "Lupin", "Hogwards", "die Karte des Rumtreibers", "Dementoren"];
 
-for (let i: number = 0; i < 5; i++) {
-    console.log(getVerse());
-}
 
-function getVerse(): string {
+shuffle(subjects);
+shuffle(verbs);
+shuffle(objects);
+
+
+
+let output: string[] = [];
+
+for (let i: number = 0; i < subjects.length; i++) {
     let sentence: string = "";
-    sentence += subjects.splice(getRandomNumber(subjects.length), 1)[0] + " ";
-    sentence += verbs.splice(getRandomNumber(verbs.length), 1)[0] + " ";
-    sentence += objects.splice(getRandomNumber(objects.length), 1)[0];
-    return sentence;
+    sentence += subjects[i] + " ";
+    sentence += verbs[i] + " ";
+    sentence += objects[i];
+    output.push(sentence);
 }
 
-function getRandomNumber(max: number){
-    return Math.floor(Math.random() * Math.floor(max));
+appendToHTML(output);
+
+function shuffle(array: any[]) {
+    array.sort(() => Math.random() - 0.5);
+}
+
+function appendToHTML(sentences: string[]) {
+    for (let i = 0; i < sentences.length; i++) {
+        document.body.innerHTML += "<p>" + sentences[i] + "</p>";
+    }
+
 }
