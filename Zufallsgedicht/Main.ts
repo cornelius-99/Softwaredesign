@@ -10,10 +10,10 @@ shuffle(verbs);
 shuffle(objects);
 
 
-
 let output: string[] = [];
 
-for (let i: number = 0; i < subjects.length; i++) {
+for (let i: number = 0; i < subjects.length; i++) 
+{
     let sentence: string = "";
     sentence += subjects[i] + " ";
     sentence += verbs[i] + " ";
@@ -23,12 +23,15 @@ for (let i: number = 0; i < subjects.length; i++) {
 
 appendToHTML(output);
 
-function shuffle(array: any[]) {
+function shuffle(array: any[]) 
+{
     array.sort(() => Math.random() - 0.5);
 }
 
-function appendToHTML(sentences: string[]) {
-    for (let i = 0; i < sentences.length; i++) {
+function appendToHTML(sentences: string[]) 
+{
+    for (let i = 0; i < sentences.length; i++) 
+    {
         document.body.innerHTML += "<p>" + sentences[i] + "</p>";
     }
 }
