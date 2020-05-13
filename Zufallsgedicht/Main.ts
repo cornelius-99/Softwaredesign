@@ -23,7 +23,7 @@ for (let i: number = 0; i < subjects.length; i++) {
 
 appendToHTML(output);
 
-function shuffle(array: any[]) {
+function shuffle(array: any[]) {  //ich weiß nicht, ob das hier zutrifft, aber "any" sollte nicht benutzt werden
     array.sort(() => Math.random() - 0.5);
 }
 
