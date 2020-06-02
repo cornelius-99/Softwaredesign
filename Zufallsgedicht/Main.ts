@@ -10,7 +10,6 @@ shuffle(verbs);
 shuffle(objects);
 
 
-
 let output: string[] = [];
 
 for (let i: number = 0; i < subjects.length; i++) {
