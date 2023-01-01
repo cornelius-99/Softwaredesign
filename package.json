@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/cornelius-99/Softwaredesign#readme",
   "devDependencies": {
-    "ts-loader": "^7.0.2",
+    "ts-loader": "^9.4.2",
     "typescript": "^3.8.3"
   }
 }
